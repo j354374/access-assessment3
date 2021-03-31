@@ -123,7 +123,7 @@ main section {
   padding-top: 1%;
 }
 
-.contact-section {
+.contact-section, .media-section {
   background-color: #94daff;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23ffbaad' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23ffdad0' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23ffb9ba' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23ffc6c3' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23ffb9ca' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23ffb2c3' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23ffbbdb' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23ff9ece' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23ffbfed' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23ff8ee3' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23fac4ff' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23ec86ff' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
   background-attachment: fixed;
@@ -291,8 +291,11 @@ input[type=reset]:hover {
   display: none;
 }
 
-audio {
-width: 31.5%;  
+iframe
+{
+width: 420px;
+height: 240px;
+float: right;
 }
 
 @media(max-width:1400px) {
@@ -304,6 +307,8 @@ width: 31.5%;
     font-size: 1.23rem;
   }
 }
+
+
 
 @media(max-width:1300px) {
   #wrapper {
@@ -363,6 +368,10 @@ width: 31.5%;
     font-size: 1.23rem;
     padding-right: 0.2%;
   }
+}
+
+audio {
+width: 31.5%;
 }
 
 @media(max-width:850px) {
