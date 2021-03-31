@@ -1,0 +1,1230 @@
+{
+  "@graph": [
+    {
+      "@context": {
+        "@vocab": "http://www.w3.org/TR/WCAG-EM/#",
+        "reporter": "https://github.com/w3c/wcag-em-report-tool/",
+        "wcagem": "http://www.w3.org/TR/WCAG-EM/#",
+        "WCAG2": "http://www.w3.org/TR/WCAG21/#",
+        "earl": "http://www.w3.org/ns/earl#",
+        "dct": "http://purl.org/dc/terms/",
+        "wai": "http://www.w3.org/WAI/",
+        "sch": "http://schema.org/",
+        "Evaluation": "wcagem:Evaluation",
+        "EvaluationScope": "wcagem:EvaluationScope",
+        "TestSubject": "earl:TestSubject",
+        "WebSite": "sch:WebSite",
+        "Sample": "wcagem:Sample",
+        "WebPage": "sch:WebPage",
+        "Technology": "WCAG2:dfn-technologies",
+        "Assertion": "earl:Assertion",
+        "Assertor": "earl:Assertor",
+        "TestResult": "earl:TestResult",
+        "title": "dct:title",
+        "summary": "dct:summary",
+        "creator": {
+          "@id": "dct:creator",
+          "@type": "@id"
+        },
+        "date": "dct:date",
+        "commissioner": "wcagem:commissioner",
+        "reliedUponTechnology": "WCAG2:dfn-relied-upon",
+        "evaluationScope": "step1",
+        "commonPages": "step2a",
+        "essentialFunctionality": "step2b",
+        "pageTypeVariety": "step2c",
+        "otherRelevantPages": "step2e",
+        "structuredSample": "step3a",
+        "randomSample": "step3b",
+        "auditResult": "step4",
+        "specifics": "step5b",
+        "publisher": {
+          "@id": "dct:publisher",
+          "@type": "@id"
+        },
+        "conformanceTarget": {
+          "@id": "step1b",
+          "@type": "@id"
+        },
+        "accessibilitySupportBaseline": "step1c",
+        "additionalEvalRequirement": "step1d",
+        "website": "WCAG2:dfn-set-of-web-pages",
+        "siteScope": "step1a",
+        "siteName": "sch:name",
+        "webpage": "WCAG2:dfn-web-page-s",
+        "description": "dct:description",
+        "source": {
+          "@id": "dct:source",
+          "@type": "@id"
+        },
+        "tested": "reporter:blob/master/docs/EARL%2BJSON-LD.md#tested",
+        "test": {
+          "@id": "earl:test",
+          "@type": "@id"
+        },
+        "assertedBy": {
+          "@id": "earl:assertedBy",
+          "@type": "@id"
+        },
+        "subject": {
+          "@id": "earl:subject",
+          "@type": "@id"
+        },
+        "result": "earl:result",
+        "mode": {
+          "@id": "earl:mode",
+          "@type": "@id"
+        },
+        "hasPart": "dct:hasPart",
+        "outcome": {
+          "@id": "earl:outcome",
+          "@type": "@id"
+        },
+        "id": "@id",
+        "type": "@type",
+        "lang": "@language"
+      },
+      "type": "Evaluation",
+      "publisher": "reporter:releases/tag/2.0.0",
+      "lang": "en",
+      "evaluationScope": {
+        "type": "EvaluationScope",
+        "conformanceTarget": "wai:WCAG2AAA-Conformance",
+        "additionalEvalRequirement": "HTML5\nECMAScript 7\nDOM\nCSS\nWAI-ARIA",
+        "website": {
+          "type": [
+            "TestSubject",
+            "WebSite"
+          ],
+          "id": "_:website",
+          "siteName": "SHT Jobs",
+          "siteScope": "6 pages were identified for evaluation, which included:\nA homepage with job skill listings. These use the HTML5 details tag and javascript to generate a link to the relevant page on an external site. The javascript also generates links to post the external site to social media networks LinkedIn and Twitter.\nA contact page with a form. A data sources page with access to useful statistical information to help job seekers. A report page with useful reports to help job seekers. An about page with articles to assist job seekers. A media page with an embedded podcast and a youtube video."
+        },
+        "accessibilitySupportBaseline": "Firefox (latest version) on a Windows device with NVDA (primary screen reader combination)\nChrome (latest version) on a Windows device (primary non-screen reader testing browser)"
+      },
+      "auditResult": [
+        {
+          "type": "Assertion",
+          "test": "WCAG2:non-text-content",
+          "assertedBy": "_:evaluator",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:failed",
+            "date": "2021-03-31 12:54:59 +0800"
+          },
+          "mode": "earl:manual",
+          "hasPart": [
+            {
+              "type": "Assertion",
+              "assertedBy": "_:evaluator",
+              "subject": [
+                "_:struct_4"
+              ],
+              "result": {
+                "type": "TestResult",
+                "description": "Missing alt element",
+                "outcome": "earl:failed",
+                "date": "2021-03-31 12:55:28 +0800"
+              },
+              "multiPage": false,
+              "mode": "earl:manual",
+              "testcase": "WCAG2:non-text-content"
+            }
+          ]
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:audio-only-and-video-only-prerecorded",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:captions-prerecorded",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:audio-description-or-media-alternative-prerecorded",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:captions-live",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:audio-description-prerecorded",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:sign-language-prerecorded",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:extended-audio-description-prerecorded",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:media-alternative-prerecorded",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:audio-only-live",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:info-and-relationships",
+          "assertedBy": "_:evaluator",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "The contact forms textarea elements are missing an associated label.",
+            "outcome": "earl:failed",
+            "date": "2021-03-31 19:12:45 +0800"
+          },
+          "mode": "earl:manual",
+          "hasPart": [
+            {
+              "type": "Assertion",
+              "assertedBy": "_:evaluator",
+              "subject": [
+                "_:struct_3"
+              ],
+              "result": {
+                "type": "TestResult",
+                "description": "",
+                "outcome": "earl:failed",
+                "date": "2021-03-31 19:12:06 +0800"
+              },
+              "multiPage": false,
+              "mode": "earl:manual",
+              "testcase": "WCAG2:info-and-relationships"
+            }
+          ]
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:meaningful-sequence",
+          "assertedBy": "_:evaluator",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:failed",
+            "date": "2021-03-31 19:16:16 +0800"
+          },
+          "mode": "earl:manual",
+          "hasPart": [
+            {
+              "type": "Assertion",
+              "assertedBy": "_:evaluator",
+              "subject": [
+                "_:struct_3"
+              ],
+              "result": {
+                "type": "TestResult",
+                "description": "Input element has more than one associated label. Label text is empty on form reset button. Add text to form label",
+                "outcome": "earl:failed",
+                "date": "2021-03-31 19:16:32 +0800"
+              },
+              "multiPage": false,
+              "mode": "earl:manual",
+              "testcase": "WCAG2:meaningful-sequence"
+            }
+          ]
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:sensory-characteristics",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:orientation",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:identify-input-purpose",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:identify-purpose",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:use-of-color",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:audio-control",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:contrast-minimum",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:resize-text",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:images-of-text",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:contrast-enhanced",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:low-or-no-background-audio",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:visual-presentation",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:images-of-text-no-exception",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:reflow",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:non-text-contrast",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:text-spacing",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:content-on-hover-or-focus",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:keyboard",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:no-keyboard-trap",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:keyboard-no-exception",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:character-key-shortcuts",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:timing-adjustable",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:pause-stop-hide",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:no-timing",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:interruptions",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:re-authenticating",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:timeouts",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:three-flashes-or-below-threshold",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:three-flashes",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:animation-from-interactions",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:bypass-blocks",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:page-titled",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:focus-order",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:link-purpose-in-context",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:multiple-ways",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:headings-and-labels",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:focus-visible",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:location",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:link-purpose-link-only",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:section-headings",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:pointer-gestures",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:pointer-cancellation",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:label-in-name",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:motion-actuation",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:target-size",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:concurrent-input-mechanisms",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:language-of-page",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:language-of-parts",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:unusual-words",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:abbreviations",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:reading-level",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:pronunciation",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:on-focus",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:on-input",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:consistent-navigation",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:consistent-identification",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:change-on-request",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:error-identification",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:labels-or-instructions",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:error-suggestion",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:error-prevention-legal-financial-data",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:help",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:error-prevention-all",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:parsing",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:name-role-value",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        },
+        {
+          "type": "Assertion",
+          "test": "WCAG2:status-messages",
+          "subject": "_:website",
+          "result": {
+            "type": "TestResult",
+            "description": "",
+            "outcome": "earl:untested"
+          },
+          "mode": "earl:manual",
+          "hasPart": []
+        }
+      ],
+      "creator": "_:evaluator",
+      "title": "Report for SHT Jobs",
+      "structuredSample": {
+        "webpage": [
+          {
+            "type": [
+              "TestSubject",
+              "WebPage"
+            ],
+            "id": "_:struct_0",
+            "description": "https://j354374.github.io/access-assessment3/index.html",
+            "source": "https://j354374.github.io/access-assessment3/index.html",
+            "title": "",
+            "tested": false
+          },
+          {
+            "type": [
+              "TestSubject",
+              "WebPage"
+            ],
+            "id": "_:struct_1",
+            "description": "https://j354374.github.io/access-assessment3/data.html",
+            "source": "https://j354374.github.io/access-assessment3/data.html",
+            "title": "",
+            "tested": false
+          },
+          {
+            "type": [
+              "TestSubject",
+              "WebPage"
+            ],
+            "id": "_:struct_2",
+            "description": "https://j354374.github.io/access-assessment3/reports.html",
+            "source": "https://j354374.github.io/access-assessment3/reports.html",
+            "title": "",
+            "tested": false
+          },
+          {
+            "type": [
+              "TestSubject",
+              "WebPage"
+            ],
+            "id": "_:struct_3",
+            "description": "https://j354374.github.io/access-assessment3/contact.html",
+            "source": "https://j354374.github.io/access-assessment3/contact.html",
+            "title": "",
+            "tested": false
+          },
+          {
+            "type": [
+              "TestSubject",
+              "WebPage"
+            ],
+            "id": "_:struct_4",
+            "description": "https://j354374.github.io/access-assessment3/media.html",
+            "source": "https://j354374.github.io/access-assessment3/media.html",
+            "title": "",
+            "tested": false
+          },
+          {
+            "type": [
+              "TestSubject",
+              "WebPage"
+            ],
+            "id": "_:struct_5",
+            "description": "https://j354374.github.io/access-assessment3/about.html",
+            "source": "https://j354374.github.io/access-assessment3/about.html",
+            "title": "",
+            "tested": false
+          }
+        ]
+      },
+      "randomSample": {
+        "webpage": [
+          {
+            "type": [
+              "TestSubject",
+              "WebPage"
+            ],
+            "id": "_:rand_0",
+            "title": "",
+            "tested": false
+          }
+        ]
+      },
+      "reliedUponTechnology": [
+        {
+          "id": "http://www.w3.org/TR/html5/",
+          "type": "Technology",
+          "title": "HTML5"
+        },
+        {
+          "id": "http://www.w3.org/Style/CSS/specs/",
+          "type": "Technology",
+          "title": "CSS"
+        },
+        {
+          "id": "http://www.w3.org/TR/wai-aria/",
+          "type": "Technology",
+          "title": "WAI-ARIA"
+        },
+        {
+          "id": "http://www.ecma-international.org/publications/standards/Ecma-262.htm",
+          "type": "Technology",
+          "title": "ECMAScript 5"
+        },
+        {
+          "id": "http://www.w3.org/DOM/",
+          "type": "Technology",
+          "title": "DOM"
+        },
+        {
+          "id": "http://www.w3.org/TR/SVG/",
+          "type": "Technology",
+          "title": "SVG"
+        }
+      ],
+      "essentialFunctionality": "The report will test all pages that were selected by the evaluator against the full Level AAA criteria, but with a conformance target of Level AA, using all listed devices, browsers and tools.\nThere are presently about 10 documents, including .docx (Word), .xslx (Excel) and PDF (Adobe). The documents were not tested at this stage as the focus is on the website and how they are served. Documents such as maps are exempt."
+    },
+    {
+      "@context": {
+        "@vocab": "http://xmlns.com/foaf/0.1/",
+        "id": "@id",
+        "type": "@type"
+      },
+      "id": "_:evaluator",
+      "type": "Person",
+      "name": ""
+    }
+  ]
+}
