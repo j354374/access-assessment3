@@ -296,6 +296,7 @@ iframe
 width: 420px;
 height: 240px;
 float: right;
+border: 0;	
 }
 
 @media(max-width:1400px) {
