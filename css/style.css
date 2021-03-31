@@ -291,6 +291,10 @@ input[type=reset]:hover {
   display: none;
 }
 
+audio {
+width: 31.5%;  
+}
+
 @media(max-width:1400px) {
   #wrapper {
     min-width: 80%;
@@ -339,10 +343,6 @@ input[type=reset]:hover {
   nav span {
     display: none;
   }
-}
-
-audio {
-wdith: 31.5%;  
 }
 
 @media(max-width:900px) {
